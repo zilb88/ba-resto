@@ -1,0 +1,50 @@
+//variables 
+$container: 1130px;
+$gap: 15px;
+$col: 12;
+$colWidth: 100% / $col;
+
+$primaryColor: #3b3b3b;
+$secondaryColor: #555555;
+
+$btnBorderColor: $primaryColor;
+
+$red: #f34b4b;
+
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: $container;
+  width: 100%;
+  padding: 0 $gap;
+  margin: 0 auto;
+}
+.ba-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$gap;
+  margin-right: -$gap;
+}
+.ba-row + .ba-row {
+  margin-top: 1rem;
+}
+
+[class^='ba-col-'] {
+  padding: 0 15px;
+}
+
+
+@for $i from 1 through $col {
+  .ba-col-#{$i} {
+    width: $colWidth * $i;
+  }
+}
+
+//mixins
+@mixin buttonHover {
+  background-color: pink;
+  border-color: darken($btnBorderColor, 15%);
+}

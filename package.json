@@ -1,0 +1,27 @@
+{
+  "name": "15",
+  "version": "1.0.0",
+  "description": "simple starter to veb development with css preprocessors",
+  "main": "index.js",
+  "dependencies": {
+    "node-static": "^0.7.11"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zilb88/ba-starter-flex.git"
+  },
+  "author": "Anton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zilb88/ba-starter-flex/issues"
+  },
+  "homepage": "https://github.com/zilb88/ba-starter-flex#readme"
+}
