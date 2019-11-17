@@ -17,7 +17,8 @@
   margin-top: 1rem; }
 
 [class^='ba-col-'] {
-  padding: 0 15px; }
+  padding: 0 15px;
+  width: 100%; }
 
 .ba-col-1 {
   width: 8.33333%; }
@@ -202,3 +203,66 @@ a {
     margin-left: .75rem;
     padding-left: 0.75rem;
     border-left: 1px solid currentColor; }
+
+.ba-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3.75rem; }
+
+.ba-section__title {
+  text-transform: uppercase;
+  position: relative;
+  max-width: 200px;
+  margin-left: 20px; }
+  .ba-section__title:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    height: 1px;
+    width: 100%;
+    background-color: #e3e1e1; }
+
+.ba-dish__thumb {
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 1.5rem; }
+
+.ba-dish__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+.ba-dish__head {
+  display: flex;
+  justify-content: space-between; }
+
+.ba-dish__title, .ba-dish__price {
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: .05em;
+  line-height: 1.1;
+  margin: 0 0 .875em; }
+
+.ba-dish-rating {
+  position: relative;
+  height: 13px;
+  width: 80px;
+  background-image: url(../img/stars-grey.png);
+  background-size: contain;
+  background-repeat: no-repeat; }
+  .ba-dish-rating_actual {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden; }
+    .ba-dish-rating_actual-stars {
+      width: 80px;
+      height: 100%;
+      background-image: url(../img/stars-gold.png);
+      background-size: cover;
+      background-repeat: no-repeat; }

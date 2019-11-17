@@ -192,3 +192,92 @@ a{
     border-left: 1px solid currentColor;
   }
 }
+
+// ba-section-header
+
+.ba-section{
+
+  &-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3.75rem;
+   }
+
+  &__title{
+    text-transform: uppercase; 
+      position: relative;
+      max-width: 200px;
+      // padding: 0 86px;
+      
+  
+      &:after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        transform: translateY(-50%);
+        height: 1px;
+        width: 100%;
+        background-color: #e3e1e1;}
+        margin-left: 20px;
+  }
+}
+
+
+// section ba-dishes
+.ba-dish{
+
+  &__thumb{
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+  &__img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__head{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title,
+  &__price{
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: .05em;
+    line-height: 1.1;
+    margin: 0 0 .875em;
+  }
+
+  &-rating{
+    position: relative;
+    height: 13px;
+    width: 80px;
+    background: {
+      image: url(../img/stars-grey.png);
+      size: contain;
+      repeat: no-repeat;
+    }
+    &_actual{
+      position: absolute;
+      height: 100%;
+      left: 0;
+      top: 0;
+      overflow: hidden;
+
+      &-stars{
+        width: 80px;
+        height: 100%;
+        background: {
+          image: url(../img/stars-gold.png);
+          size: cover;
+          repeat: no-repeat;
+        }
+      }
+    }
+  }
+}
+
