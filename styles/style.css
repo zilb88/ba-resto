@@ -56,6 +56,14 @@
 .ba-col-12 {
   width: 100%; }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  left: -999999px; }
+
 @font-face {
   font-family: 'wc_mano_negra_btaregular';
   src: url("../fonts/WCManoNegraBta-webfont.woff");
@@ -102,6 +110,34 @@ a {
     outline-color: #f34b4b; }
     .ba-menu__link:hover {
       opacity: 0.75; }
+  .ba-menu__btn {
+    display: none; }
+  @media screen and (max-width: 600px) {
+    .ba-menu {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      min-height: 100vh;
+      background-color: #fff;
+      transform: translateX(-100%);
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 30px 15px 30px 30px;
+      transition: transform .4s; }
+      .ba-menu__btn {
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        z-index: 5; }
+        .ba-menu__btn span {
+          display: inline-block;
+          width: 100%;
+          height: 2px;
+          background-color: #000; }
+      #menuOpen:checked ~ .ba-menu {
+        transform: translateX(0); } }
 
 .ba-hero {
   min-height: calc(100vh - 187px);
@@ -115,7 +151,11 @@ a {
   background-repeat: no-repeat; }
   .ba-hero__title {
     font-family: wc_mano_negra_btaregular, serif;
-    font-size: 6.25rem; }
+    font-size: 6.25rem;
+    margin: 0; }
+    @media screen and (max-width: 600px) {
+      .ba-hero__title {
+        font-size: 2.5rem; } }
   .ba-hero__desc {
     position: relative;
     max-width: 50%;
@@ -213,8 +253,7 @@ a {
 .ba-section__title {
   text-transform: uppercase;
   position: relative;
-  max-width: 200px;
-  margin-left: 20px; }
+  max-width: 200px; }
   .ba-section__title:after {
     content: '';
     position: absolute;
@@ -223,7 +262,11 @@ a {
     transform: translateY(-50%);
     height: 1px;
     width: 100%;
-    background-color: #e3e1e1; }
+    background-color: #e3e1e1;
+    margin-left: 20px; }
+    @media screen and (max-width: 600px) {
+      .ba-section__title:after {
+        content: none; } }
 
 .ba-dish__thumb {
   height: 200px;
@@ -266,3 +309,7 @@ a {
       background-image: url(../img/stars-gold.png);
       background-size: cover;
       background-repeat: no-repeat; }
+
+@media screen and (min-width: 600px) {
+  .ba-menu-item {
+    width: calc(50% - 20px); } }
